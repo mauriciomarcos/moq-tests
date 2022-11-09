@@ -17,8 +17,8 @@ namespace Calculos.Tests.Servicos
             IImposto iss = issMock.Object;
 
             //Arrange (dependência logger)
-            var mock = new Mock<ILogger<ContabilidadeService>>();
-            var logger = mock.Object;
+            var mockLogger = new Mock<ILogger<ContabilidadeService>>();
+            var logger = mockLogger.Object;
 
             //Arrange (contabilide services)
             var contabilidade = new ContabilidadeService(iss, logger);
